@@ -1,0 +1,14 @@
+.product-details {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.product-details img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.product-details h2 {
+  margin-top: 0;
+}

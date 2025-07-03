@@ -1,0 +1,121 @@
+body.light {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-color: inherit;
+  color: inherit;
+}
+
+.left-links {
+  display: flex;
+  gap: 20px;
+}
+
+#nav a {
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark #nav a {
+  background-color: #333;
+  color: #eee;
+  border-color: #555;
+}
+
+#nav a:hover {
+  background-color: rgb(37, 51, 46);
+  color: white;
+}
+
+#radio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  user-select: none;
+  color: inherit;
+}
+
+#radio input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light #radio input[type="radio"] {
+  background-color: white;
+}
+
+body.dark #radio input[type="radio"] {
+  background-color: black;
+}
+
+#radio input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: dodgerblue;
+  transition: background-color 0.3s ease;
+}
+
+#radio input[type="radio"]:hover {
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.6);
+}
+
+#radio span {
+  cursor: default;
+  user-select: none;
+}
+
+#outlet {
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid currentColor;
+  border-radius: 12px;
+  background-color: inherit;
+  color: inherit;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 300px;
+}
+
+#footer {
+  background-color: aquamarine;
+  color: black;
+  text-align: center;
+  padding: 12px 0;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: bold;
+}
