@@ -1,19 +1,17 @@
 import { Link, Outlet } from "react-router-dom";
-import './Main.css';
 import { useState, useEffect } from "react";
+import "./Main.css";
 
 export function Main() {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    document.body.className = theme; }, [theme]);
+    document.body.className = theme;
+  }, [theme]);
 
-  const darkClass = theme === "dark" ? "dot dark active" : "dot dark";
-  const lightClass = theme === "light" ? "dot light active" : "dot light";
-
-    function changeTheme(event) {
-    setTheme(event.target.value);
-   }
+  function changeTheme(e) {
+    setTheme(e.target.value);
+  }
 
   return (
     <>
@@ -23,23 +21,21 @@ export function Main() {
           <Link to="/about">About</Link>
           <Link to="/contacts">Contacts</Link>
         </div>
-        
-
-         <div id="radio">
+        <div id="radio">
           <span>Dark</span>
           <input
             type="radio"
-            name="radio"
+            name="theme"
             value="dark"
-            onClick={changeTheme}
+            onChange={changeTheme}
             checked={theme === "dark"}
           />
           <span>Light</span>
           <input
             type="radio"
-            name="radio"
+            name="theme"
             value="light"
-            onClick={changeTheme}
+            onChange={changeTheme}
             checked={theme === "light"}
           />
         </div>

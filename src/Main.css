@@ -10,6 +10,7 @@ body.dark {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
 #nav {
   display: flex;
   justify-content: space-between;
@@ -25,7 +26,7 @@ body.dark {
   gap: 20px;
 }
 
-#nav a {
+#nav * {
   text-decoration: none;
   padding: 8px 16px;
   border: 1px solid currentColor;
@@ -35,13 +36,13 @@ body.dark {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark #nav a {
+body.dark #nav * {
   background-color: #333;
   color: #eee;
   border-color: #555;
 }
 
-#nav a:hover {
+#nav *:hover {
   background-color: rgb(37, 51, 46);
   color: white;
 }
@@ -58,9 +59,7 @@ body.dark #nav a {
 
 #radio input[type="radio"] {
   appearance: none;
-  width: 18px;
   height: 18px;
-  border-radius: 50%;
   border: 2px solid currentColor;
   background-color: transparent;
   position: relative;
